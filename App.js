@@ -1,19 +1,25 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React,{useState} from 'react';
+import { Button, StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
+  const [name,setName] = useState('.......');
+  const [detils,setDetils] = useState({email:'ishan@gmail.com' , age: 40});
+
+  const clickHandler = () => {
+    setName('ishanka');
+  }
+
   return (
     <View style={styles.container}>
-      <View style={styles.hedar}>
-        <Text style={styles.boldText}>Hello,APP</Text>
+    
+     <Text>My name is {name}</Text>
+     <Text>My Mail is {detils.email} and my age is {detils.age}</Text>
+     
+     <View style={styles.buttonContainer}>
+        <Button  title = 'Update State' onPress={clickHandler}/>
       </View>
-      <View style={styles.body}>
-      <Text style={styles.boldText}>Lorem ipum adwda dfscs</Text>
-      <Text>Lorem ipum adwda dfscs</Text>
-      <Text>Lorem ipum adwda dfscs</Text>
-      <Text>Lorem ipum adwda dfscs</Text>
-      </View>
+      
     </View>
 
     
@@ -27,19 +33,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  hedar: {
-    backgroundColor:'green',
-    padding:20,
-   
+  buttonContainer:{
+    marginTop:20,
     
-  },
-  boldText:{
-    fontWeight:'bold',
-   
-  },
-  body:{
-    backgroundColor:'yellow',
-    padding:20,
-    marginTop:10,
   }
 });
