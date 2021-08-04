@@ -20,9 +20,8 @@ export default function App() {
     <ScrollView>
     <View style={styles.container}>
     
-
-    {people.map((item) => {
-      return (
+   
+    {people.map(item => (
         <View key={item.key}>
           <Text style={styles.item}>{item.name}</Text>
          
@@ -30,7 +29,7 @@ export default function App() {
         </View>
         
       )
-    })}
+    )}
       
     </View>
 
