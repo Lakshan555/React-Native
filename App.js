@@ -1,14 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React,{useState} from 'react';
+import { Button, StyleSheet, Text, View,TextInput,ScrollView } from 'react-native';
 
 export default function App() {
+
+ 
   return (
+ 
     <View style={styles.container}>
-     
+
     </View>
 
-    
   );
 }
 
@@ -16,7 +18,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'white',
-    alignItems: 'center',
-    justifyContent: 'center',
+
   }
+
+
 });
